@@ -81,7 +81,7 @@ body {
 
 .info-container {
     flex: 1;
-    padding: 150px 180px 0px 30px;
+    padding: 60px 180px 0px 30px;
     background-color: #eee;
     box-shadow: inset 0px -2px 6px #aaa;
 }
@@ -124,13 +124,30 @@ body {
     top: -1.5em;
 }
 
-.form-row input {
+.form-row input{
+    appearance: none;
     width: 250px;
     font-size: 1.05rem;
     height: 2rem;
     margin-bottom: 20px;
     margin-right: 80px;
     padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #00000033;
+}
+
+.form-fields div:last-of-type {
+    margin-bottom: 0px;
+}
+
+.form-row input:invalid {
+    border: 1px red solid;
+}
+
+.form-row input:focus {
+    outline: none;
+    border: 2px rgb(44, 153, 255) solid;
+    box-shadow: 1px 1px 6px #000000dd;
 }
 
 h2 {
@@ -162,4 +179,10 @@ button:active {
     cursor: pointer;
     background-color: #198151;
     transform: scale(0.95);
+}
+
+.form-submit a {
+    text-decoration: none;
+    color: #23a066;
+    font-weight: 700;
 }

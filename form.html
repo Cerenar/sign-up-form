@@ -21,7 +21,8 @@
     </div>
     <div class="content-container">
         <div class="info-container">
-            <h2>This isn't actually a real service, but it <em>is</em> a real cool form. Whatever you choose to do here, we hope you like the way it looks.</h2>
+            <h2>Bloom is a company connecting people to plants. If you're looking to install new greenery into your life, look no further.</h2>
+            <h2>This isn't a real service, but it <em>is</em> a real cool form. Whatever you choose to do here, we hope you like the way it looks.</h2>
             <h2>Thanks for checking it out!</h2>
         </div>
         <div class="form-container">
@@ -29,23 +30,24 @@
                 <div class="form-fields">
                     <h2>Sign up now!</h2>
                     <div class="form-row">
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="first-name" id="first-name">
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" name="last-name" id="last-name">
+                        <label for="first-name">FIRST NAME *</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="John" required>
+                        <label for="last-name">LAST NAME *</label>
+                        <input type="text" name="last-name" id="last-name" placeholder="Doe" required>
                     </div>
                     <div class="form-row">
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" name="phone" id="phone">
+                        <label for="email">EMAIL *</label>
+                        <input type="email" name="email" id="email" placeholder="john.doe@example.com" required>
+                        <label for="phone">PHONE NUMBER (123-456-7890)</label>
+                        <input type="tel" name="phone" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                     </div>
                     <div class="form-row">
-                        <label for="pwd">PASSWORD</label>
-                        <input type="password" name="pwd" id="pwd">
-                        <label for="pwd-confirm">CONFIRM PASSWORD</label>
-                        <input type="password" name="pwd-confirm" id="pwd-confirm">
+                        <label for="pwd">PASSWORD *</label>
+                        <input type="password" name="pwd" id="pwd" required>
+                        <label for="pwd-confirm">CONFIRM PASSWORD *</label>
+                        <input type="password" name="pwd-confirm" id="pwd-confirm" required>
                     </div>
+                    <p>Fields marked with * are required.</p>
                 </div>
                 <div class="form-submit">
                     <button>Create Account</button>
