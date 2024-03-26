@@ -10,6 +10,15 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+@font-face {
+    font-family: "plante";
+    src:
+        url("fonts/plante-webfont.woff2") format("woff2"),
+        url("fonts/plante-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     width: 1400px;
     height: 100vh;
@@ -19,27 +28,49 @@ body {
     margin: auto;
 }
 
+.image-container img[src="plants.jpg"] {
+    width: 100%;
+    transform: scale(2.5);
+}
+
 .image-container {
     position: relative;
     width: 35%;
-    border: 1px solid black;
-    background: linear-gradient(blue, orange)
+    overflow: hidden;
 }
 
 .image-container .img-text {
     width: 100%;
     height: 15%;
-    top: 300px;
+    top: 42.5%;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000000bb;
+    background: #00000077;
+    gap: 8px;
+}
+
+.image-container img[src="leaf.png"] {
+    transform: scale(0.65);
 }
 
 .img-text h2 {
     font-size: 3rem;
-    color: white;
+    color: #ccc;
+    font: 4rem "plante";
+}
+
+.image-container .photo-credit {
+    position: absolute;
+    font-weight: 600;
+    bottom: 16px;
+    left: 95px;
+    color: #ccc;
+}
+
+.image-container .photo-credit a {
+    color: #ccc;
 }
 
 .content-container {
@@ -51,6 +82,8 @@ body {
 .info-container {
     flex: 1;
     padding: 150px 180px 0px 30px;
+    background-color: #eee;
+    box-shadow: inset 0px -2px 6px #aaa;
 }
 
 .info-container h2 {
@@ -64,14 +97,19 @@ body {
 }
 
 .form-fields {
+    height: 33.33vh;
     padding: 10px 30px;
     height: 33.33vh;
-    box-shadow: 2px 4px 3px #ccc;
+    /* box-shadow: px 4px 2px #aaa; */
+    background-color: #f1f1f1;
+    box-shadow: 0px 2px 6px #aaa;
 }
 
 .form-submit {
     height: 33.33vh;
     padding: 40px 30px;
+    background-color: #eee;
+    box-shadow: inset 0px 2px 6px #aaa;
 }
 
 .form-row {
@@ -108,13 +146,20 @@ button {
     border: none;
     color: #ddd;
     font-size: 1rem;
-    background-color: rgb(233, 97, 30);
+    background-color: #076338;
     border-radius: 4px;
     padding: 8px 48px;
     margin-bottom: 20px;
+    transition: 0.1s;
 }
 
 button:hover {
     cursor: pointer;
-    background-color: rgb(165, 72, 29);
+    background-color: #23a066;
+}
+
+button:active {
+    cursor: pointer;
+    background-color: #198151;
+    transform: scale(0.95);
 }
